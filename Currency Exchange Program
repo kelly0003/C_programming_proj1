@@ -1,0 +1,108 @@
+#include<stdio.h>
+
+int main()
+{
+	//defining conversion factors as a constant floating-point number
+		//conversion factor for Chinese Yuan
+	const float usd2cny = 7.11;
+	const float cny2usd = 1/usd2cny;
+	const float cny2mxn = 2.8;
+	const float mxn2cny = 1/cny2mxn;
+	const float cny2ngn = 222.13;
+	const float ngn2cny = 1/cny2ngn;
+	const float cny2pkr = 39.18;
+	
+	const float pkr2cny = 1/cny2pkr;
+	const float cny2rub = 12.3;
+	const float rub2cny = 1/cny2rub;
+	const float cny2krw = 187.7;
+	const float krw2cny = 1/cny2krw;
+	const float cny2chf = 0.12;
+	const float chf2cny = 1/cny2chf;
+	const float cny2tzs = 381.7;
+	const float tzs2cny = 1/cny2tzs;
+		//conversion factor for Mexican Peso
+	const float usd2mxn = 19.78;
+	const float mxn2usd = 1/usd2mxn;
+	const float mxn2ngn = 79.25;
+	const float ngn2mxn = 1/mxn2ngn;
+	const float mxn2pkr = 13.98;
+	const float pkr2mxn = 1/mxn2pkr;
+	const float mxn2rub = 4.39;
+	const float rub2mxn = 1/mxn2rub;
+	const float mxn2krw = 67.0;
+	const float krw2mxn = 1/mxn2krw;
+	const float mxn2chf = 0.043;
+	const float chf2mxn = 1/mxn2chf;
+	const float mxn2tzs = 136.14;
+	const float tzs2mxn = 1/mxn2tzs;
+		//conversion factor for Nigerian Naira
+	const float usd2ngn = 780.00;
+	const float ngn2usd = 1/usd2ngn;
+	const float ngn2pkr = 0.17;
+	const float pkr2ngn = 1/ngn2pkr;
+	const float ngn2rub = 0.054;
+	const float rub2ngn = 1/ngn2rub;
+	const float ngn2krw = 0.82;
+	const float krw2ngn = 1/ngn2krw;
+	const float ngn2chf = 0.00052;
+	const float chf2ngn = 1/ngn2chf;
+	const float ngn2tzs = 1.67;
+	const float tzs2ngn = 1/ngn2tzs;
+		//conversion factor for Pakistan Rupee
+	const float usd2pkr = 278.25;
+	const float pkr2usd = 1/usd2pkr;
+	const float pkr2rub = 0.31;
+	const float rub2pkr = 1/pkr2rub;
+	const float pkr2krw = 4.79;
+	const float krw2pkr = 1/pkr2krw;
+	const float pkr2chf = 0.003;
+	const float chf2pkr = 1/pkr2chf;
+	const float pkr2tzs = 9.74;
+	const float tzs2pkr = 1/pkr2tzs;
+		//conversion factor for Russian Ruble
+	const float usd2rub = 88.25;
+	const float rub2usd = 1/usd2rub;
+	const float rub2krw = 15.26;
+	const float krw2rub = 1/rub2krw;
+	const float rub2chf = 0.0097;
+	const float chf2rub = 1/rub2chf;
+	const float rub2tzs = 31.03;
+	const float tzs2rub = 1/rub2tzs;
+		//conversion factor for South Korea Won
+	const float usd2krw = 1341.52;
+	const float krw2usd = 1/usd2krw;
+	const float krw2chf = 0.00063;
+	const float chf2krw = 1/krw2chf;
+	const float krw2tzs = 2.03;
+	const float tzs2krw = 1/krw2tzs;
+		//conversion factor for Swiss Franc
+	const float usd2chf = 00.85;
+	const float chf2usd = 1/usd2chf;
+	const float chf2tzs = 3202.41;
+	const float tzs2chf = 1/chf2tzs;
+		//conversion factor for Tanzanian Shilling
+	const float usd2tzs = 2715.00;
+	const float tzs2usd = 1/usd2tzs;
+	
+	//defining variable to store currency units
+	float currency = 00.00;
+	
+	//ask user to input currency exchange amount in USD
+	printf("Please enter USD amount to exchange: ");
+	//get currency amount from user
+	scanf("%f",&currency);
+	
+	//print the results in table format
+	printf("\n\n\t USD \t CNY \t MXN \t NGN \t PKR \t RUB \t KRW \t CHF \t TZS ");
+	printf("\n\n USD \t %.2f \t %.2f \t %.2f \t %.2f \t %.2f \t %.2f \t %.2f \t %.2f \t %.2f", currency, currency*cny2usd, currency*mxn2usd, currency*ngn2usd, currency*pkr2usd, currency*rub2usd, currency*krw2usd, currency*chf2usd, currency*tzs2usd);
+	printf("\n\n CNY \t %.2f \t %.2f \t %.2f \t %.2f  %.2f \t %.2f \t %.2f  %.2f \t %.2f", currency*usd2cny, currency, currency*cny2mxn, currency*cny2ngn, currency*cny2pkr, currency*cny2rub,currency*cny2krw, currency*cny2chf, currency*cny2tzs);
+	printf("\n\n MXN \t %.2f \t %.2f \t %.2f \t %.2f \t %.2f \t %.2f \t %.2f \t %.2f \t %.2f", currency*usd2mxn, currency*mxn2cny, currency, currency*mxn2ngn, currency*mxn2pkr, currency*mxn2rub, currency*mxn2krw, currency*mxn2chf, currency*mxn2tzs);
+	printf("\n\n NGN \t %.2f  %.2f \t %.2f \t %.2f \t %.2f \t %.2f \t %.2f \t %.2f \t %.2f", currency*usd2ngn, currency*ngn2cny, currency*ngn2mxn, currency, currency*ngn2pkr, currency*ngn2rub, currency*ngn2krw, currency*ngn2chf, currency*ngn2tzs);
+	printf("\n\n PKR \t %.2f  %.2f \t %.2f \t %.2f \t %.2f \t %.2f \t %.2f \t %.2f \t %.2f", currency*usd2pkr, currency*pkr2cny, currency*pkr2mxn, currency*pkr2ngn, currency, currency*pkr2rub,currency*pkr2krw, currency*pkr2chf, currency*pkr2tzs);
+	printf("\n\n RUB \t %.2f \t %.2f \t %.2f \t %.2f \t %.2f \t %.2f \t %.2f \t %.2f \t %.2f", currency*usd2rub, currency*rub2cny, currency*rub2mxn, currency*rub2ngn, currency*rub2pkr, currency, currency*rub2krw, currency*rub2chf, currency*rub2tzs);
+	printf("\n\n KRW \t %.2f  %.2f \t %.2f \t %.2f \t %.2f \t %.2f \t %.2f \t %.2f \t %.2f", currency*usd2krw, currency*krw2cny, currency*krw2mxn, currency*krw2ngn, currency*krw2pkr, currency*krw2rub, currency, currency*krw2chf, currency*krw2tzs);
+	printf("\n\n CHF \t %.2f \t %.2f \t %.2f \t %.2f  %.2f  %.2f  %.2f  %.2f  %.2f", currency*usd2chf, currency*chf2cny, currency*chf2mxn, currency*chf2ngn, currency*chf2pkr, currency*chf2rub, currency*chf2krw, currency, currency*chf2tzs);	
+	printf("\n\n TZS \t %.2f  %.2f \t %.2f \t %.2f \t %.2f \t %.2f \t %.2f \t %.2f \t %.2f", currency*usd2tzs, currency*tzs2cny, currency*tzs2mxn, currency*tzs2ngn, currency*tzs2pkr, currency*tzs2rub, currency*tzs2krw, currency*tzs2chf, currency);
+	return 0;
+}
